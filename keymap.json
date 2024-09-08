@@ -15,7 +15,15 @@
   {
     "context": "Editor",
     "bindings": {
-      "cmd-l": "editor::ShowCompletions"
+      "cmd-l": "editor::ShowCompletions",
+      "g n": "pane::ActivateNextItem",
+      "g p": "pane::ActivatePrevItem"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "b c": "pane::CloseActiveItem"
     }
   }
 ]

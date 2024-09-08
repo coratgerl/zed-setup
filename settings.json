@@ -7,6 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "assistant": {
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
   "vim_mode": true,
   "formatter": {
     "language_server": {
@@ -41,5 +51,6 @@
       "jsonc",
       "*.code-snippets"
     ]
-  }
+  },
+  "soft_wrap": "editor_width"
 }
