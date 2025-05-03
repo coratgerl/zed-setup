@@ -7,47 +7,121 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-	"terminal": {
-		"dock": "right"
-	},
-	"assistant": {
-		"dock": "bottom",
-  "default_model": {
-			"provider": "anthropic",
-			"model": "claude-3-5-sonnet-20240620"
-		},
-		"version": "2"
-	},
-	"preview_tabs": {
-		"enabled": false
-	},
-	"vim_mode": true,
-	"formatter": {
-		"language_server": {
-			"name": "biome"
-		}
-	},
-	"features": {
-		"inline_completion_provider": "supermaven"
-	},
-	"telemetry": {
-		"diagnostics": false,
-		"metrics": false
-	},
-	"ui_font_size": 14,
-	"buffer_font_size": 14,
-	"theme": {
-		"mode": "system",
-		"light": "One Light",
-		"dark": "Atelier Sulphurpool Dark"
-	},
-	"format_on_save": "on",
-	"tab_bar": {
-		"show": true
-	},
-	"file_types": {
-		"Dockerfile": ["Dockerfile", "Dockerfile.*"],
-		"JSON": ["json", "jsonc", "*.code-snippets"]
-	},
-	"soft_wrap": "editor_width"
+  "languages": {
+    "Markdown": {
+      "show_edit_predictions": false
+    },
+    "Zig": {
+      "formatter": "language_server",
+      "language_servers": ["zls"]
+    },
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/@biomejs/biome/bin/biome",
+          "arguments": [
+            "check",
+            "--write",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/@biomejs/biome/bin/biome",
+          "arguments": [
+            "check",
+            "--write",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/@biomejs/biome/bin/biome",
+          "arguments": [
+            "check",
+            "--write",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSX": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/@biomejs/biome/bin/biome",
+          "arguments": [
+            "check",
+            "--write",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "./node_modules/@biomejs/biome/bin/biome",
+          "arguments": [
+            "check",
+            "--write",
+            "--stdin-file-path",
+            "{buffer_path}"
+          ]
+        }
+      }
+    }
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": false,
+    "show_parameter_hints": false
+  },
+  "terminal": {
+    "dock": "right"
+  },
+  "assistant": {
+    "dock": "bottom",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2"
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
+  "vim_mode": false,
+  "features": {
+    "edit_prediction_provider": "supermaven"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 14.0,
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  },
+  "format_on_save": "on",
+  "tab_bar": {
+    "show": true
+  },
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+  "soft_wrap": "editor_width"
 }
